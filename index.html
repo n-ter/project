@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>form</title>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="bootstrap.min.css" type="text/css"/>
+	<link href="style.css" rel="stylesheet"> 
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.maskedinput.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		 <div class="col-md-12">
+			<div class="modal-header"> 
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+			<h3 id="myModalLabel">Добро пожаловать на сайт!</h3> 
+			</div> 
+			<div class="modal-body"> 
+				<ul class="nav nav-tabs" id="login-or-register"> 
+					<li ><a href="#register" data-toggle="tab">Регистрация</a></li> 
+					<li class="active"><a href="#profile" data-toggle="tab">Авторизация</a></li> 
+				</ul> 
+				<div class="tab-content"> 
+					<div class="tab-pane" id="register"> 
+						<form class="form-horizontal" role="form" action="#"> <br/>
+							<div class="form-group"> 
+								<label for="login" class="col-sm-2 control-label">Ваш логин *</label> 
+								<div class="col-sm-10">
+									<input id="login" class="form-control" placeholder="Логин" required="required" name="login" value=""/>
+								</div>
+							</div> 
+							<div class="form-group"> 
+								<label for="name" class="col-sm-2 control-label">Ваши ФИО *</label> 
+								<div class="col-sm-10">
+									<input id="name" class="form-control" placeholder="ФИО" required="required" name="name" value=""/> 
+								</div>
+							</div> 
+							<div class="form-group"> 
+								<label for="e-mail" class="col-sm-2 control-label">Ваш e-mail *</label> 
+								<div class="col-sm-10">
+									<input id="e-mail" class="form-control" placeholder="e-mail" required="required" name="e-mail" value=""/> 
+								</div>
+							</div> 
+							<div class="form-group"> 
+								<label for="phone" class="col-sm-2 control-label">Ваш номер телефона *</label>
+								<div class="col-sm-10"> 
+									<input id="phone" class="form-control" name="phone" placeholder="Номер телефона" required="required" value=""/> 
+								</div>
+							</div> 
+							<div class="form-group"> 
+								<label for="password" class="col-sm-2 control-label">Ваш пароль *</label> 
+								<div class="col-sm-10">
+									<input id="password" class="form-control" placeholder="Пароль" name="password" required="required" value="" /> 
+								</div>
+							</div> 
+							<div class="form-group"> 
+								<label for="password_repeat" class="col-sm-2 control-label">Повторите Ваш пароль *</label>
+								<div class="col-sm-10"> 
+									<input id="password_repeat" class="form-control" placeholder="Повторение пароля" name="password_repeat" required="required" value="" /> 
+								</div>
+							</div> 
+							<div class="form-group"> 
+								<div class="col-sm-offset-2 col-sm-10">
+	      							<button type="submit" class="btn btn-default">Зарегистрироваться</button>
+	    						</div>
+							</div> 
+						</form> 
+					</div> 
+					<div class="tab-pane active" id="profile"> 
+						<form class="form-horizontal" role="form" action="#"> <br/>
+							<div class="form-group"> 
+								<label class="col-sm-2 control-label" for="user_login">Ваш логин *</label> 
+								<div class="col-sm-10"> 
+									<input id="user_login" class="form-control" placeholder="Логин" required="required" name="login" value="" /> 
+								</div>
+							</div> 
+							<div class="form-group"> 
+								<label class="col-sm-2 control-label" for="user_password">Ваш пароль *</label> 
+								<div class="col-sm-10"> 
+									<input id="user_password" class="form-control" placeholder="Пароль" required="required" name="password" value="" /> 
+								</div>
+							</div> 
+							<div class="form-group">
+							    <div class="col-sm-offset-2 col-sm-10">
+							      <div class="checkbox">
+							        <label>
+							          <input type="checkbox"> Запомнить меня
+							        </label>
+							      </div>
+							    </div>
+							</div> 
+							<div class="form-group"> 
+								<div class="col-sm-offset-2 col-sm-10">
+	      							<button type="submit" class="btn btn-default">Войти</button>
+	    						</div>
+							</div>
+						</form> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="modal-footer"> 
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button> 
+			</div> 
+		</div>
+	</div>
+	<script type="text/javascript">
+		jQuery(function($){
+   		$("#phone").mask("+7 (999) 999-9999");
+		});
+	</script>
+</body>
+</html>
